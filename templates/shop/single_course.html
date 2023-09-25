@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ course.title }}{% endblock%}
+
+{% block my_course %}
+<h1 class='text-center mt-3'>
+    {{ course.title }}
+</h1>
+
+<h2 class='text-center'>
+    <strong>
+        {{ course.category }}
+    </strong>
+</h2>
+
+<h3 class='text-center mt-5'>
+    {{ course.price }}$
+    <p class="fst-italic fs-5">
+        <small class='text-muted'><del>79.99$</del></small>
+    </p>
+</h3>
+
+<p class="text-center text-decoration-underline">
+    {{ course.students_qty }} students!
+</p>
+
+<div class="col-md-12 text-center">
+    <button type="button" class="btn btn-outline-primary btn-lg">
+        Buy
+    </button>
+</div>
+
+{% endblock %}
